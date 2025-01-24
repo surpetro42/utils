@@ -3,22 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   philosophers.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kali <kali@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: surpetro <surpetro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/22 04:49:39 by kali              #+#    #+#             */
-/*   Updated: 2025/01/22 05:51:00 by kali             ###   ########.fr       */
+/*   Created: 2025/01/23 16:42:39 by surpetro          #+#    #+#             */
+/*   Updated: 2025/01/24 23:01:25 by surpetro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philosophers.h"
 
-int main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
-	t_info	info;
+	t_data	data;
 
 	if (argc == 5 || argc == 6)
 	{
-		if (info_start(argc, argv, &info) == 0)
+		if (begin_information(argc, argv, &data) == 0)
 		{
 			printf("invalid input\n");
 			return (1);
@@ -26,9 +26,10 @@ int main(int argc, char **argv)
 	}
 	else
 	{
-		printf("ERROR!\nEntering the wrong amount\n");
+		printf("ERROR!\nSxal qanaki mutqagrum\n");
 		return (1);
 	}
-	beginning_phil(&info, -1);
+	process_philo(&data);
+	system("leaks philo");
 	return (0);
 }
